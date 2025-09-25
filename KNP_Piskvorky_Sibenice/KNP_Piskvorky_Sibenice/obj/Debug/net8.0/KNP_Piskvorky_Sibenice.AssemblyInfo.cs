@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KNP_Piskvorky_Sibenice")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+640a77999855780d04cf2fb23ad72a11c9aead47")]
 [assembly: System.Reflection.AssemblyProductAttribute("KNP_Piskvorky_Sibenice")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KNP_Piskvorky_Sibenice")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

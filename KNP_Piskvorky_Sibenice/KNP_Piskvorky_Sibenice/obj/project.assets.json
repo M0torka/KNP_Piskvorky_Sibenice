@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\horakj24\\Desktop\\škola\\VYS\\KNP_Piskvorky_Sibenice\\KNP_Piskvorky_Sibenice\\KNP_Piskvorky_Sibenice.csproj",
+      "projectUniqueName": "C:\\Users\\horakj24\\Desktop\\škola\\VYS\\KNP_Piskvorky_Sibenice\\KNP_Piskvorky_Sibenice\\KNP_Piskvorky_Sibenice\\KNP_Piskvorky_Sibenice.csproj",
       "projectName": "KNP_Piskvorky_Sibenice",
-      "projectPath": "C:\\Users\\horakj24\\Desktop\\škola\\VYS\\KNP_Piskvorky_Sibenice\\KNP_Piskvorky_Sibenice\\KNP_Piskvorky_Sibenice.csproj",
+      "projectPath": "C:\\Users\\horakj24\\Desktop\\škola\\VYS\\KNP_Piskvorky_Sibenice\\KNP_Piskvorky_Sibenice\\KNP_Piskvorky_Sibenice\\KNP_Piskvorky_Sibenice.csproj",
       "packagesPath": "C:\\Users\\horakj24\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\horakj24\\Desktop\\škola\\VYS\\KNP_Piskvorky_Sibenice\\KNP_Piskvorky_Sibenice\\obj\\",
+      "outputPath": "C:\\Users\\horakj24\\Desktop\\škola\\VYS\\KNP_Piskvorky_Sibenice\\KNP_Piskvorky_Sibenice\\KNP_Piskvorky_Sibenice\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

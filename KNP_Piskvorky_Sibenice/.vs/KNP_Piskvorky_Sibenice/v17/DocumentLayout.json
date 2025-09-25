@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\horakj24\\Desktop\\\u0161kola\\VYS\\KNP_Piskvorky_Sibenice\\KNP_Piskvorky_Sibenice\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{69A7BBF7-D6FB-41FE-A62F-F175D9997475}|KNP_Piskvorky_Sibenice\\KNP_Piskvorky_Sibenice.csproj|c:\\users\\horakj24\\desktop\\\u0161kola\\vys\\knp_piskvorky_sibenice\\knp_piskvorky_sibenice\\knp_piskvorky_sibenice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69A7BBF7-D6FB-41FE-A62F-F175D9997475}|KNP_Piskvorky_Sibenice\\KNP_Piskvorky_Sibenice.csproj|solutionrelative:knp_piskvorky_sibenice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\horakj24\\Desktop\\\u0161kola\\VYS\\KNP_Piskvorky_Sibenice\\KNP_Piskvorky_Sibenice\\KNP_Piskvorky_Sibenice\\Program.cs",
+              "RelativeDocumentMoniker": "KNP_Piskvorky_Sibenice\\Program.cs",
+              "ToolTip": "C:\\Users\\horakj24\\Desktop\\\u0161kola\\VYS\\KNP_Piskvorky_Sibenice\\KNP_Piskvorky_Sibenice\\KNP_Piskvorky_Sibenice\\Program.cs*",
+              "RelativeToolTip": "KNP_Piskvorky_Sibenice\\Program.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T06:20:26.294Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

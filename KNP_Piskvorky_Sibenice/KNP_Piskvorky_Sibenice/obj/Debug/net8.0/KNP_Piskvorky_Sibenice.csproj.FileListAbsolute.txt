@@ -1,0 +1,15 @@
+C:\Users\horakj24\Desktop\škola\VYS\KNP_Piskvorky_Sibenice\KNP_Piskvorky_Sibenice\KNP_Piskvorky_Sibenice\bin\Debug\net8.0\KNP_Piskvorky_Sibenice.exe
+C:\Users\horakj24\Desktop\škola\VYS\KNP_Piskvorky_Sibenice\KNP_Piskvorky_Sibenice\KNP_Piskvorky_Sibenice\bin\Debug\net8.0\KNP_Piskvorky_Sibenice.deps.json
+C:\Users\horakj24\Desktop\škola\VYS\KNP_Piskvorky_Sibenice\KNP_Piskvorky_Sibenice\KNP_Piskvorky_Sibenice\bin\Debug\net8.0\KNP_Piskvorky_Sibenice.runtimeconfig.json
+C:\Users\horakj24\Desktop\škola\VYS\KNP_Piskvorky_Sibenice\KNP_Piskvorky_Sibenice\KNP_Piskvorky_Sibenice\bin\Debug\net8.0\KNP_Piskvorky_Sibenice.dll
+C:\Users\horakj24\Desktop\škola\VYS\KNP_Piskvorky_Sibenice\KNP_Piskvorky_Sibenice\KNP_Piskvorky_Sibenice\bin\Debug\net8.0\KNP_Piskvorky_Sibenice.pdb
+C:\Users\horakj24\Desktop\škola\VYS\KNP_Piskvorky_Sibenice\KNP_Piskvorky_Sibenice\KNP_Piskvorky_Sibenice\obj\Debug\net8.0\KNP_Piskvorky_Sibenice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\horakj24\Desktop\škola\VYS\KNP_Piskvorky_Sibenice\KNP_Piskvorky_Sibenice\KNP_Piskvorky_Sibenice\obj\Debug\net8.0\KNP_Piskvorky_Sibenice.AssemblyInfoInputs.cache
+C:\Users\horakj24\Desktop\škola\VYS\KNP_Piskvorky_Sibenice\KNP_Piskvorky_Sibenice\KNP_Piskvorky_Sibenice\obj\Debug\net8.0\KNP_Piskvorky_Sibenice.AssemblyInfo.cs
+C:\Users\horakj24\Desktop\škola\VYS\KNP_Piskvorky_Sibenice\KNP_Piskvorky_Sibenice\KNP_Piskvorky_Sibenice\obj\Debug\net8.0\KNP_Piskvorky_Sibenice.csproj.CoreCompileInputs.cache
+C:\Users\horakj24\Desktop\škola\VYS\KNP_Piskvorky_Sibenice\KNP_Piskvorky_Sibenice\KNP_Piskvorky_Sibenice\obj\Debug\net8.0\KNP_Piskvorky_Sibenice.sourcelink.json
+C:\Users\horakj24\Desktop\škola\VYS\KNP_Piskvorky_Sibenice\KNP_Piskvorky_Sibenice\KNP_Piskvorky_Sibenice\obj\Debug\net8.0\KNP_Piskvorky_Sibenice.dll
+C:\Users\horakj24\Desktop\škola\VYS\KNP_Piskvorky_Sibenice\KNP_Piskvorky_Sibenice\KNP_Piskvorky_Sibenice\obj\Debug\net8.0\refint\KNP_Piskvorky_Sibenice.dll
+C:\Users\horakj24\Desktop\škola\VYS\KNP_Piskvorky_Sibenice\KNP_Piskvorky_Sibenice\KNP_Piskvorky_Sibenice\obj\Debug\net8.0\KNP_Piskvorky_Sibenice.pdb
+C:\Users\horakj24\Desktop\škola\VYS\KNP_Piskvorky_Sibenice\KNP_Piskvorky_Sibenice\KNP_Piskvorky_Sibenice\obj\Debug\net8.0\KNP_Piskvorky_Sibenice.genruntimeconfig.cache
+C:\Users\horakj24\Desktop\škola\VYS\KNP_Piskvorky_Sibenice\KNP_Piskvorky_Sibenice\KNP_Piskvorky_Sibenice\obj\Debug\net8.0\ref\KNP_Piskvorky_Sibenice.dll
