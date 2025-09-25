@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36414.22 d17.14
+VisualStudioVersion = 17.14.36414.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KNP_Piskvorky_Sibenice", "KNP_Piskvorky_Sibenice\KNP_Piskvorky_Sibenice.csproj", "{69A7BBF7-D6FB-41FE-A62F-F175D9997475}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KamenNuzkyPapir", "KamenNuzkyPapir\KamenNuzkyPapir.csproj", "{CC435E2F-FD6F-4F85-A668-3729FFA0D258}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sibenice", "Sibenice\Sibenice.csproj", "{853D8C78-4953-420F-BEAF-B690FF0053D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{69A7BBF7-D6FB-41FE-A62F-F175D9997475}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69A7BBF7-D6FB-41FE-A62F-F175D9997475}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69A7BBF7-D6FB-41FE-A62F-F175D9997475}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC435E2F-FD6F-4F85-A668-3729FFA0D258}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC435E2F-FD6F-4F85-A668-3729FFA0D258}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC435E2F-FD6F-4F85-A668-3729FFA0D258}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC435E2F-FD6F-4F85-A668-3729FFA0D258}.Release|Any CPU.Build.0 = Release|Any CPU
+		{853D8C78-4953-420F-BEAF-B690FF0053D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{853D8C78-4953-420F-BEAF-B690FF0053D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{853D8C78-4953-420F-BEAF-B690FF0053D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{853D8C78-4953-420F-BEAF-B690FF0053D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
