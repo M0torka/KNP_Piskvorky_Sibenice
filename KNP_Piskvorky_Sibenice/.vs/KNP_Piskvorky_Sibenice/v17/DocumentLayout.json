@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\horakj24\\Desktop\\\u0161kola\\VYS\\KNP_Piskvorky_Sibenice\\KNP_Piskvorky_Sibenice\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F951D583-9FBE-4BEC-B34D-2E821AD9B110}|Piskvorky\\Piskvorky.csproj|c:\\users\\horakj24\\desktop\\\u0161kola\\vys\\knp_piskvorky_sibenice\\knp_piskvorky_sibenice\\piskvorky\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F951D583-9FBE-4BEC-B34D-2E821AD9B110}|Piskvorky\\Piskvorky.csproj|solutionrelative:piskvorky\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69A7BBF7-D6FB-41FE-A62F-F175D9997475}|KNP_Piskvorky_Sibenice\\KNP_Piskvorky_Sibenice.csproj|c:\\users\\horakj24\\desktop\\\u0161kola\\vys\\knp_piskvorky_sibenice\\knp_piskvorky_sibenice\\knp_piskvorky_sibenice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69A7BBF7-D6FB-41FE-A62F-F175D9997475}|KNP_Piskvorky_Sibenice\\KNP_Piskvorky_Sibenice.csproj|solutionrelative:knp_piskvorky_sibenice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{853D8C78-4953-420F-BEAF-B690FF0053D1}|Sibenice\\Sibenice.csproj|c:\\users\\horakj24\\desktop\\\u0161kola\\vys\\knp_piskvorky_sibenice\\knp_piskvorky_sibenice\\sibenice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{853D8C78-4953-420F-BEAF-B690FF0053D1}|Sibenice\\Sibenice.csproj|solutionrelative:sibenice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CC435E2F-FD6F-4F85-A668-3729FFA0D258}|KamenNuzkyPapir\\KamenNuzkyPapir.csproj|c:\\users\\horakj24\\desktop\\\u0161kola\\vys\\knp_piskvorky_sibenice\\knp_piskvorky_sibenice\\kamennuzkypapir\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC435E2F-FD6F-4F85-A668-3729FFA0D258}|KamenNuzkyPapir\\KamenNuzkyPapir.csproj|solutionrelative:kamennuzkypapir\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{853D8C78-4953-420F-BEAF-B690FF0053D1}|Sibenice\\Sibenice.csproj|c:\\users\\horakj24\\desktop\\\u0161kola\\vys\\knp_piskvorky_sibenice\\knp_piskvorky_sibenice\\sibenice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{853D8C78-4953-420F-BEAF-B690FF0053D1}|Sibenice\\Sibenice.csproj|solutionrelative:sibenice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\horakj24\\Desktop\\\u0161kola\\VYS\\KNP_Piskvorky_Sibenice\\KNP_Piskvorky_Sibenice\\Piskvorky\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Piskvorky\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,24 +22,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\horakj24\\Desktop\\\u0161kola\\VYS\\KNP_Piskvorky_Sibenice\\KNP_Piskvorky_Sibenice\\Sibenice\\Program.cs",
               "RelativeDocumentMoniker": "Sibenice\\Program.cs",
               "ToolTip": "C:\\Users\\horakj24\\Desktop\\\u0161kola\\VYS\\KNP_Piskvorky_Sibenice\\KNP_Piskvorky_Sibenice\\Sibenice\\Program.cs",
               "RelativeToolTip": "Sibenice\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-25T06:26:30.402Z",
-              "IsPinned": true
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\horakj24\\Desktop\\\u0161kola\\VYS\\KNP_Piskvorky_Sibenice\\KNP_Piskvorky_Sibenice\\Piskvorky\\Program.cs",
               "RelativeDocumentMoniker": "Piskvorky\\Program.cs",
@@ -56,7 +52,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\horakj24\\Desktop\\\u0161kola\\VYS\\KNP_Piskvorky_Sibenice\\KNP_Piskvorky_Sibenice\\KamenNuzkyPapir\\Program.cs",
               "RelativeDocumentMoniker": "KamenNuzkyPapir\\Program.cs",
@@ -64,19 +60,7 @@
               "RelativeToolTip": "KamenNuzkyPapir\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T06:25:38.116Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\horakj24\\Desktop\\\u0161kola\\VYS\\KNP_Piskvorky_Sibenice\\KNP_Piskvorky_Sibenice\\KNP_Piskvorky_Sibenice\\Program.cs",
-              "RelativeDocumentMoniker": "KNP_Piskvorky_Sibenice\\Program.cs",
-              "ToolTip": "C:\\Users\\horakj24\\Desktop\\\u0161kola\\VYS\\KNP_Piskvorky_Sibenice\\KNP_Piskvorky_Sibenice\\KNP_Piskvorky_Sibenice\\Program.cs",
-              "RelativeToolTip": "KNP_Piskvorky_Sibenice\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T06:20:26.294Z",
+              "WhenOpened": "2025-09-25T06:25:38.116Z",
               "EditorCaption": ""
             }
           ]
