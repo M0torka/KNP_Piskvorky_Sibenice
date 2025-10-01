@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sibenice", "Sibenice\Sibeni
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Piskvorky", "Piskvorky\Piskvorky.csproj", "{64C90F4D-BC51-3427-3EE4-DBAE4E65BB6D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BonusGame", "BonusGame\BonusGame.csproj", "{31538B51-FF64-427E-B8B7-9D84442C05E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{64C90F4D-BC51-3427-3EE4-DBAE4E65BB6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64C90F4D-BC51-3427-3EE4-DBAE4E65BB6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64C90F4D-BC51-3427-3EE4-DBAE4E65BB6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31538B51-FF64-427E-B8B7-9D84442C05E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31538B51-FF64-427E-B8B7-9D84442C05E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31538B51-FF64-427E-B8B7-9D84442C05E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31538B51-FF64-427E-B8B7-9D84442C05E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
