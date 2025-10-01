@@ -48,7 +48,7 @@ class Program
             }
             else if (result == 1)
             {
-                Console.WriteLine("Vyhrál jsi! 🎉");
+                Console.WriteLine("Vyhrál jsi!");
                 scoreUser++;
             }
             else

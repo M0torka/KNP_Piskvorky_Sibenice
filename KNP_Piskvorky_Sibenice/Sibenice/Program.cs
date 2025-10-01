@@ -1,87 +1,90 @@
 ﻿using System;
 using System.Linq;
 
-
 class Program
 {
     static void Main()
     {
         Console.OutputEncoding = System.Text.Encoding.UTF8;
-        string[] words = {
-"program", "stůl", "čokoláda", "klíč", "kamarád",
-"počítač", "město", "hory", "zahrada", "kolo"
-};
-
-
         Random rand = new Random();
-        string word = words[rand.Next(words.Length)].ToLower();
-        char[] guessed = new string('_', word.Length).ToCharArray();
 
+        bool playAgain = true;
 
-        int lives = 7;
-        bool won = false;
-
-
-        while (lives > 0 && !won)
+        while (playAgain)
         {
-            Console.Clear();
-            Console.WriteLine("Šibenice — uhodni slovo!");
-            Console.WriteLine($"Životy: {lives}");
-            Console.WriteLine($"Slovo: {new string(guessed)}");
+            string[] words = {
+                "skibidi", "sigma", "sixseven", "ohio", "totr",
+                "babyvocals", "dudeman", "epstein", "labubu", "dubai"
+            };
 
+            string word = words[rand.Next(words.Length)].ToLower();
+            char[] guessed = new string('_', word.Length).ToCharArray();
 
-            Console.Write("Hádej písmeno: ");
-            string input = Console.ReadLine()?.ToLower() ?? "";
+            int lives = 7;
+            bool won = false;
 
-
-            if (input.Length != 1 || !char.IsLetter(input[0]))
+            while (lives > 0 && !won)
             {
-                Console.WriteLine("Zadej prosím jedno písmeno.");
-                Console.ReadKey();
-                continue;
-            }
+                Console.Clear();
+                Console.WriteLine("Šibenice — uhodni slovo!");
+                Console.WriteLine($"Životy: {lives}");
+                Console.WriteLine($"Slovo: {new string(guessed)}");
 
+                Console.Write("Hádej písmeno: ");
+                string input = Console.ReadLine()?.ToLower() ?? "";
 
-            char guess = input[0];
-
-
-            if (guessed.Contains(guess))
-            {
-                Console.WriteLine("Toto písmeno už jsi hádal.");
-                Console.ReadKey();
-                continue;
-            }
-
-
-            bool correct = false;
-            for (int i = 0; i < word.Length; i++)
-            {
-                if (word[i] == guess)
+                if (input.Length != 1 || !char.IsLetter(input[0]))
                 {
-                    guessed[i] = guess;
-                    correct = true;
+                    Console.WriteLine("Zadej jen jedno písmeno.");
+                    Console.ReadKey();
+                    continue;
                 }
+
+                char guess = input[0];
+
+                if (guessed.Contains(guess))
+                {
+                    Console.WriteLine("Toto písmeno už jsi hádal.");
+                    Console.ReadKey();
+                    continue;
+                }
+
+                bool correct = false;
+                for (int i = 0; i < word.Length; i++)
+                {
+                    if (word[i] == guess)
+                    {
+                        guessed[i] = guess;
+                        correct = true;
+                    }
+                }
+
+                if (!correct)
+                {
+                    lives--;
+                }
+
+                won = !guessed.Contains('_');
             }
 
-
-            if (!correct)
+            Console.Clear();
+            if (won)
             {
-                lives--;
+                Console.WriteLine($"Hezky pěkně! Uhodl jsi slovo: {word}");
+            }
+            else
+            {
+                Console.WriteLine($"Buuuu, seš trouba. Slovo bylo: {word}");
             }
 
+            Console.WriteLine();
+            Console.Write("Chceš hrát znovu? (a/n): ");
+            string again = Console.ReadLine()?.ToLower();
 
-            won = !guessed.Contains('_');
+            playAgain = (again == "a" || again == "ano");
         }
 
-
-        Console.Clear();
-        if (won)
-        {
-            Console.WriteLine($"Výborně! Uhodl jsi slovo: {word} 🎉");
-        }
-        else
-        {
-            Console.WriteLine($"Prohrál jsi. Slovo bylo: {word}");
-        }
+        Console.WriteLine("Papaaa!");
     }
 }
+
