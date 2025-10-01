@@ -29,7 +29,7 @@ class Program
                 playAgain = false;
         }
 
-        Console.WriteLine("\nDíky za hru! 👋");
+        Console.WriteLine("\nPapaaaaa!");
     }
 
     static void PlayRound(int seconds)
@@ -37,10 +37,13 @@ class Program
         Console.Clear();
         Console.WriteLine("=== Spacebar Challenge ===");
         Console.WriteLine($"Stiskni MEZERNÍK co nejvíc za {seconds} sekund.");
-        Console.WriteLine("Poznámka: držení mezerníku se NEPOČÍTÁ jako vícestisk.");
         Console.WriteLine($"Aktuální rekord: {record}");
-        Console.WriteLine("Stiskni ENTER pro start...");
-        Console.ReadLine();
+        Console.WriteLine("Začni stisknutím MEZERNÍKU...");
+
+        // čekání na první stisk mezerníku
+        while (!IsSpaceDown()) { Thread.Sleep(1); }
+        // počká, až ho hráč pustí (aby se první stisk nepočítal rovnou do výsledku)
+        while (IsSpaceDown()) { Thread.Sleep(1); }
 
         int count = 0;
         Stopwatch sw = Stopwatch.StartNew();
