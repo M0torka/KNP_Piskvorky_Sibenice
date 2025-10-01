@@ -1,44 +1,84 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Runtime.InteropServices;
 using System.Threading;
 
 class Program
 {
+    [DllImport("user32.dll")]
+    private static extern short GetAsyncKeyState(int vKey);
+    private const int VK_SPACE = 0x20;
+
+    static int record = 0; // uchovává nejlepší skóre
+
     static void Main()
     {
         Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+        bool playAgain = true;
+        while (playAgain)
+        {
+            PlayRound(5); // délka kola v sekundách
+
+            Console.Write("\nChceš hrát znovu? (a/n): ");
+            string ans = Console.ReadLine()?.Trim().ToLower();
+
+            if (ans == "a" || ans == "ano")
+                playAgain = true;
+            else
+                playAgain = false;
+        }
+
+        Console.WriteLine("\nDíky za hru! 👋");
+    }
+
+    static void PlayRound(int seconds)
+    {
+        Console.Clear();
         Console.WriteLine("=== Spacebar Challenge ===");
-        Console.WriteLine("Úkol: Stiskni co nejvícekrát MEZERNÍK za 5 vteřin!");
-        Console.WriteLine("Připrav se a stiskni ENTER pro start...");
+        Console.WriteLine($"Stiskni MEZERNÍK co nejvíc za {seconds} sekund.");
+        Console.WriteLine("Poznámka: držení mezerníku se NEPOČÍTÁ jako vícestisk.");
+        Console.WriteLine($"Aktuální rekord: {record}");
+        Console.WriteLine("Stiskni ENTER pro start...");
         Console.ReadLine();
 
         int count = 0;
-        Stopwatch stopwatch = new Stopwatch();
-        stopwatch.Start();
+        Stopwatch sw = Stopwatch.StartNew();
+        bool prevDown = false;
 
-        Console.WriteLine("Začni mačkat MEZERNÍK!");
-
-        // časový limit 5 sekund
-        while (stopwatch.Elapsed < TimeSpan.FromSeconds(5))
+        while (sw.Elapsed < TimeSpan.FromSeconds(seconds))
         {
-            if (Console.KeyAvailable)
+            bool isDown = IsSpaceDown();
+            if (isDown && !prevDown)
             {
-                var key = Console.ReadKey(true).Key;
-                if (key == ConsoleKey.Spacebar)
-                {
-                    count++;
-                }
+                count++;
             }
-            Thread.Sleep(1); // malý oddech pro CPU
+
+            prevDown = isDown;
+            Thread.Sleep(1);
         }
 
-        stopwatch.Stop();
+        sw.Stop();
         Console.WriteLine($"\nČas vypršel! Počet stisknutí: {count}");
 
-        // Hodnocení podle výkonu
+        if (count > record)
+        {
+            record = count;
+            Console.WriteLine("🏆 Nový rekord!");
+        }
+        else
+        {
+            Console.WriteLine($"Rekord zůstává: {record}");
+        }
+
         if (count < 20) Console.WriteLine("💤 Trochu pomalejší tempo.");
         else if (count < 50) Console.WriteLine("🙂 Dobrá rychlost!");
         else if (count < 80) Console.WriteLine("🔥 Skvělý výkon!");
-        else Console.WriteLine("🚀 Neuvěřitelná rychlost!");
+        else Console.WriteLine("🚀 Tyran rychlosti!");
+    }
+
+    static bool IsSpaceDown()
+    {
+        return (GetAsyncKeyState(VK_SPACE) & 0x8000) != 0;
     }
 }
