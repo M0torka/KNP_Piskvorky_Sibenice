@@ -14,18 +14,18 @@ namespace MonoGame
         private Vector2 _position;
         private Vector2 _velocity;
 
-        private float _acceleration = 300f;   // pixely/s²
-        private float _maxSpeed = 600f;        // max rychlost
-        private float _friction = 250f;        // zpomalení
+        private float _acceleration = 600f;   // zrychlení
+        private float _maxSpeed = 1000f;      // max rychlost
+        private float _friction = 600f;       // rychlost zpomalení
 
         private float _jitterBase = 0.5f;
-        private float _jitterFactor = 2.5f;
+        private float _jitterFactor = 5f;
         private float _jitterTime;
 
-        private Color _cubeColor = new Color(160, 0, 200);     // fialová
-        private Color _backgroundColor = new Color(200, 255, 200); // světle zelená
+        private Color _cubeColor = new Color(160, 0, 200);         // barva kostky
+        private Color _backgroundColor = new Color(200, 255, 200); // barva pozadí
 
-        private int _cubeSize = 50;
+        private int _cubeSize = 40;
 
         public Game1()
         {
@@ -92,14 +92,26 @@ namespace MonoGame
 
             _position += _velocity * dt;
 
-            // jitter efekt
+            // jitter efekt (pouze při pohybu)
+            Vector2 jitter = Vector2.Zero;
             float speed = _velocity.Length();
-            float jitterAmount = _jitterBase + (speed / _maxSpeed) * _jitterFactor;
-            _jitterTime += dt * (1f + speed * 0.01f);
-            float jx = (float)(Math.Sin(_jitterTime * 6.1) + Math.Cos(_jitterTime * 4.7)) * jitterAmount;
-            float jy = (float)(Math.Cos(_jitterTime * 5.3) - Math.Sin(_jitterTime * 3.8)) * jitterAmount;
+            if (speed > 0.1f)
+            {
+                float jitterAmount = _jitterBase + (speed / _maxSpeed) * _jitterFactor;
+                _jitterTime += dt * (1f + speed * 0.01f);
+                float jx = (float)(Math.Sin(_jitterTime * 6.1) + Math.Cos(_jitterTime * 4.7)) * jitterAmount;
+                float jy = (float)(Math.Cos(_jitterTime * 5.3) - Math.Sin(_jitterTime * 3.8)) * jitterAmount;
+                jitter = new Vector2(jx, jy);
+            }
 
-            _position += new Vector2(jx, jy);
+            _position += jitter;
+
+            // Omez pohyb do okna
+            int screenWidth = _graphics.PreferredBackBufferWidth;
+            int screenHeight = _graphics.PreferredBackBufferHeight;
+
+            _position.X = Math.Clamp(_position.X, 0, screenWidth - _cubeSize);
+            _position.Y = Math.Clamp(_position.Y, 0, screenHeight - _cubeSize);
 
             base.Update(gameTime);
         }
