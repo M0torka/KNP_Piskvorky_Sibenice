@@ -19,7 +19,7 @@ namespace MonoGame
         private float _friction = 600f;        // zpomalení
 
         private float _jitterBase = 0.5f;
-        private float _jitterFactor = 10f;
+        private float _jitterFactor = 5f;
 
         private Color _cubeColor = new Color(160, 0, 200);     // fialová
         private Color _backgroundColor = new Color(200, 255, 200); // světle zelená
@@ -105,12 +105,31 @@ namespace MonoGame
 
             _position += jitter;
 
-            // Omez pohyb do okna
+            // Omez pohyb do okna a zastav při nárazu
             int screenWidth = _graphics.PreferredBackBufferWidth;
             int screenHeight = _graphics.PreferredBackBufferHeight;
 
-            _position.X = Math.Clamp(_position.X, 0, screenWidth - _cubeSize);
-            _position.Y = Math.Clamp(_position.Y, 0, screenHeight - _cubeSize);
+            if (_position.X < 0)
+            {
+                _position.X = 0;
+                if (_velocity.X < 0) _velocity.X = 0;
+            }
+            else if (_position.X > screenWidth - _cubeSize)
+            {
+                _position.X = screenWidth - _cubeSize;
+                if (_velocity.X > 0) _velocity.X = 0;
+            }
+
+            if (_position.Y < 0)
+            {
+                _position.Y = 0;
+                if (_velocity.Y < 0) _velocity.Y = 0;
+            }
+            else if (_position.Y > screenHeight - _cubeSize)
+            {
+                _position.Y = screenHeight - _cubeSize;
+                if (_velocity.Y > 0) _velocity.Y = 0;
+            }
 
             base.Update(gameTime);
         }
