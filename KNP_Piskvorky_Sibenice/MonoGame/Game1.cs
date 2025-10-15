@@ -28,6 +28,12 @@ namespace MonoGame
 
         private Random _random = new Random();
 
+        // AI proměnné
+        private bool _aiActive = false;
+        private Vector2 _aiInput = Vector2.Zero;
+        private float _aiTimer = 0f;
+        private float _aiNextChange = 0f;
+
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -62,13 +68,38 @@ namespace MonoGame
             KeyboardState k = Keyboard.GetState();
             float dt = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
+            // Přepnutí AI mezerníkem
+            if (k.IsKeyDown(Keys.Space))
+                _aiActive = !_aiActive;
+
             Vector2 input = Vector2.Zero;
-            if (k.IsKeyDown(Keys.W)) input.Y -= 1;
-            if (k.IsKeyDown(Keys.S)) input.Y += 1;
-            if (k.IsKeyDown(Keys.A)) input.X -= 1;
-            if (k.IsKeyDown(Keys.D)) input.X += 1;
-            if (input != Vector2.Zero)
-                input.Normalize();
+
+            if (_aiActive)
+            {
+                // AI generuje náhodný pohyb každých 0.2-1.0 sekund
+                _aiTimer += dt;
+                if (_aiTimer >= _aiNextChange)
+                {
+                    _aiTimer = 0f;
+                    _aiNextChange = 0.2f + (float)_random.NextDouble() * 0.8f;
+
+                    _aiInput.X = _random.Next(-1, 2); // -1, 0, 1
+                    _aiInput.Y = _random.Next(-1, 2);
+                    if (_aiInput != Vector2.Zero)
+                        _aiInput.Normalize();
+                }
+
+                input = _aiInput;
+            }
+            else
+            {
+                if (k.IsKeyDown(Keys.W)) input.Y -= 1;
+                if (k.IsKeyDown(Keys.S)) input.Y += 1;
+                if (k.IsKeyDown(Keys.A)) input.X -= 1;
+                if (k.IsKeyDown(Keys.D)) input.X += 1;
+                if (input != Vector2.Zero)
+                    input.Normalize();
+            }
 
             if (input != Vector2.Zero)
             {
