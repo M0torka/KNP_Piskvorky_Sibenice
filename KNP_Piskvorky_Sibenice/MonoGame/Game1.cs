@@ -14,18 +14,19 @@ namespace MonoGame
         private Vector2 _position;
         private Vector2 _velocity;
 
-        private float _acceleration = 600f;   // zrychlení
-        private float _maxSpeed = 1000f;      // max rychlost
-        private float _friction = 600f;       // rychlost zpomalení
+        private float _acceleration = 600f;   // pixely/s²
+        private float _maxSpeed = 1000f;       // max rychlost
+        private float _friction = 600f;        // zpomalení
 
         private float _jitterBase = 0.5f;
-        private float _jitterFactor = 5f;
-        private float _jitterTime;
+        private float _jitterFactor = 10f;
 
-        private Color _cubeColor = new Color(160, 0, 200);         // barva kostky
-        private Color _backgroundColor = new Color(200, 255, 200); // barva pozadí
+        private Color _cubeColor = new Color(160, 0, 200);     // fialová
+        private Color _backgroundColor = new Color(200, 255, 200); // světle zelená
 
         private int _cubeSize = 40;
+
+        private Random _random = new Random();
 
         public Game1()
         {
@@ -48,7 +49,6 @@ namespace MonoGame
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-
             _cubeTexture = new Texture2D(GraphicsDevice, 1, 1);
             _cubeTexture.SetData(new[] { Color.White });
         }
@@ -92,15 +92,14 @@ namespace MonoGame
 
             _position += _velocity * dt;
 
-            // jitter efekt (pouze při pohybu)
+            // jitter efekt – čistě náhodný a pouze při pohybu
             Vector2 jitter = Vector2.Zero;
             float speed = _velocity.Length();
             if (speed > 0.1f)
             {
                 float jitterAmount = _jitterBase + (speed / _maxSpeed) * _jitterFactor;
-                _jitterTime += dt * (1f + speed * 0.01f);
-                float jx = (float)(Math.Sin(_jitterTime * 6.1) + Math.Cos(_jitterTime * 4.7)) * jitterAmount;
-                float jy = (float)(Math.Cos(_jitterTime * 5.3) - Math.Sin(_jitterTime * 3.8)) * jitterAmount;
+                float jx = (float)(_random.NextDouble() * 2 - 1) * jitterAmount;
+                float jy = (float)(_random.NextDouble() * 2 - 1) * jitterAmount;
                 jitter = new Vector2(jx, jy);
             }
 
