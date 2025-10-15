@@ -14,15 +14,15 @@ namespace MonoGame
         private Vector2 _position;
         private Vector2 _velocity;
 
-        private float _acceleration = 600f;   // pixely/s²
+        private float _acceleration = 600f;    // zrychlení
         private float _maxSpeed = 1000f;       // max rychlost
-        private float _friction = 600f;        // zpomalení
+        private float _friction = 600f;        // rychlost zpomalení
 
         private float _jitterBase = 0.5f;
         private float _jitterFactor = 5f;
 
-        private Color _cubeColor = new Color(160, 0, 200);     // fialová
-        private Color _backgroundColor = new Color(200, 255, 200); // světle zelená
+        private Color _cubeColor = new Color(160, 0, 200);         // barva kostky
+        private Color _backgroundColor = new Color(200, 255, 200); // barva pozadí
 
         private int _cubeSize = 40;
 
@@ -39,6 +39,7 @@ namespace MonoGame
         {
             _graphics.PreferredBackBufferWidth = 1280;
             _graphics.PreferredBackBufferHeight = 720;
+            _graphics.IsFullScreen = true;
             _graphics.ApplyChanges();
 
             _position = new Vector2(640, 360);
