@@ -30,18 +30,24 @@ namespace Bonus_AI_game
             _graphics.PreferredBackBufferHeight = 600;
             _graphics.ApplyChanges();
 
-            int size = 100;
+            ResetGame();
 
+            base.Initialize();
+        }
+
+        private void ResetGame()
+        {
+            int size = 100;
             _blueRect = new Rectangle(200, 500, size, size);
             _redRect = new Rectangle(500, 500, size, size);
 
-            base.Initialize();
+            _backgroundColor = new Color(180, 255, 180);
+            _gameOver = false;
         }
 
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-
             _pixel = new Texture2D(GraphicsDevice, 1, 1);
             _pixel.SetData(new[] { Color.White });
         }
@@ -51,32 +57,38 @@ namespace Bonus_AI_game
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            if (_gameOver)
-                return;
-
             KeyboardState keyboard = Keyboard.GetState();
 
-            // Blue player (S)
-            if (keyboard.IsKeyDown(Keys.S) && !_prevKeyboard.IsKeyDown(Keys.S))
-                _blueRect.Y -= 20;
-
-            // Red player (Down Arrow)
-            if (keyboard.IsKeyDown(Keys.Down) && !_prevKeyboard.IsKeyDown(Keys.Down))
-                _redRect.Y -= 20;
-
-            // Check win conditions
-            if (_blueRect.Y <= 0)
+            if (!_gameOver)
             {
-                _blueRect.Y = 0;
-                _gameOver = true;
-                _backgroundColor = Color.Blue;
+                // Blue player (S)
+                if (keyboard.IsKeyDown(Keys.S) && !_prevKeyboard.IsKeyDown(Keys.S))
+                    _blueRect.Y -= 20;
+
+                // Red player (Down Arrow)
+                if (keyboard.IsKeyDown(Keys.Down) && !_prevKeyboard.IsKeyDown(Keys.Down))
+                    _redRect.Y -= 20;
+
+                // Check win conditions
+                if (_blueRect.Y <= 0)
+                {
+                    _blueRect.Y = 0;
+                    _gameOver = true;
+                    _backgroundColor = Color.Blue;
+                }
+
+                if (_redRect.Y <= 0)
+                {
+                    _redRect.Y = 0;
+                    _gameOver = true;
+                    _backgroundColor = Color.Red;
+                }
             }
-
-            if (_redRect.Y <= 0)
+            else
             {
-                _redRect.Y = 0;
-                _gameOver = true;
-                _backgroundColor = Color.Red;
+                // Reset hry po stisknutí mezerníku
+                if (keyboard.IsKeyDown(Keys.Space) && !_prevKeyboard.IsKeyDown(Keys.Space))
+                    ResetGame();
             }
 
             _prevKeyboard = keyboard;
@@ -88,10 +100,8 @@ namespace Bonus_AI_game
             GraphicsDevice.Clear(_backgroundColor);
 
             _spriteBatch.Begin();
-
             _spriteBatch.Draw(_pixel, _blueRect, Color.Blue);
             _spriteBatch.Draw(_pixel, _redRect, Color.Red);
-
             _spriteBatch.End();
 
             base.Draw(gameTime);
