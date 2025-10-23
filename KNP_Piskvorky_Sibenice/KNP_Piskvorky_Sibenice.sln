@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BonusGame", "BonusGame\Bonu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoGame", "MonoGame\MonoGame.csproj", "{D857D319-8355-2EE4-C5B1-DC3B5C1626E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bonus_AI_game", "Bonus_AI_game\Bonus_AI_game.csproj", "{C177AE43-FDDB-AA56-8205-9217121A959E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{D857D319-8355-2EE4-C5B1-DC3B5C1626E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D857D319-8355-2EE4-C5B1-DC3B5C1626E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D857D319-8355-2EE4-C5B1-DC3B5C1626E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C177AE43-FDDB-AA56-8205-9217121A959E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C177AE43-FDDB-AA56-8205-9217121A959E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C177AE43-FDDB-AA56-8205-9217121A959E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C177AE43-FDDB-AA56-8205-9217121A959E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
