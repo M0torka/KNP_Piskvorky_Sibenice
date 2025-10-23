@@ -27,7 +27,7 @@ namespace Bonus_AI_game
         protected override void Initialize()
         {
             _graphics.PreferredBackBufferWidth = 800;
-            _graphics.PreferredBackBufferHeight = 600;
+            _graphics.PreferredBackBufferHeight = 1000;
             _graphics.ApplyChanges();
 
             ResetGame();
@@ -38,8 +38,8 @@ namespace Bonus_AI_game
         private void ResetGame()
         {
             int size = 100;
-            _blueRect = new Rectangle(200, 500, size, size);
-            _redRect = new Rectangle(500, 500, size, size);
+            _blueRect = new Rectangle(200, _graphics.PreferredBackBufferHeight - size, size, size);
+            _redRect  = new Rectangle(500, _graphics.PreferredBackBufferHeight - size, size, size);
 
             _backgroundColor = new Color(180, 255, 180);
             _gameOver = false;
@@ -62,12 +62,12 @@ namespace Bonus_AI_game
             if (!_gameOver)
             {
                 // Blue player (S)
-                if (keyboard.IsKeyDown(Keys.S) && !_prevKeyboard.IsKeyDown(Keys.S))
-                    _blueRect.Y -= 20;
+                if (keyboard.IsKeyDown(Keys.W) && !_prevKeyboard.IsKeyDown(Keys.W))
+                    _blueRect.Y -= 10;
 
                 // Red player (Down Arrow)
-                if (keyboard.IsKeyDown(Keys.Down) && !_prevKeyboard.IsKeyDown(Keys.Down))
-                    _redRect.Y -= 20;
+                if (keyboard.IsKeyDown(Keys.Up) && !_prevKeyboard.IsKeyDown(Keys.Up))
+                    _redRect.Y -= 10;
 
                 // Check win conditions
                 if (_blueRect.Y <= 0)
