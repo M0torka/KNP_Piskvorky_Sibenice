@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Threading;
 
-class Program
+class BonusGame
 {
     [DllImport("user32.dll")]
     private static extern short GetAsyncKeyState(int vKey);

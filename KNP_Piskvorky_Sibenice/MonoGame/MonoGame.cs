@@ -5,7 +5,7 @@ using System;
 
 namespace MonoGame
 {
-    public class Game1 : Game
+    public class MonoGame : Game
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
@@ -34,7 +34,7 @@ namespace MonoGame
         private float _aiTimer = 0f;
         private float _aiNextChange = 0f;
 
-        public Game1()
+        public MonoGame()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";

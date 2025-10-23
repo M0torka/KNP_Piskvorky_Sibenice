@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-class Program
+class Sibenice
 {
     static void Main()
     {

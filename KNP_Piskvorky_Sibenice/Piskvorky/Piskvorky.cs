@@ -1,6 +1,6 @@
 ﻿using System;
 
-class Program
+class Piskvorky
 {
     static char[,] board;
     static char currentPlayer;

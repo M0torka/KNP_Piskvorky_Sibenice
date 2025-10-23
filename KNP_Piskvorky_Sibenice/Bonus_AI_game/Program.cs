@@ -1,2 +1,2 @@
-﻿using var game = new Bonus_AI_game.Game1();
+﻿using var game = new Bonus_AI_game.Bonus_AI_game();
 game.Run();

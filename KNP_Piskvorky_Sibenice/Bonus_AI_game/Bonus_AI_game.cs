@@ -4,12 +4,12 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Bonus_AI_game
 {
-    public class Game1 : Game
+    public class Bonus_AI_game : Game
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
-        public Game1()
+        public Bonus_AI_game()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
