@@ -9,6 +9,14 @@ namespace Bonus_AI_game
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
+        private Texture2D _pixel;
+        private Rectangle _blueRect;
+        private Rectangle _redRect;
+
+        private KeyboardState _prevKeyboard;
+        private bool _gameOver = false;
+        private Color _backgroundColor = new Color(180, 255, 180); // vybledle zelená
+
         public Bonus_AI_game()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -18,7 +26,14 @@ namespace Bonus_AI_game
 
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
+            _graphics.PreferredBackBufferWidth = 800;
+            _graphics.PreferredBackBufferHeight = 600;
+            _graphics.ApplyChanges();
+
+            int size = 100;
+
+            _blueRect = new Rectangle(200, 500, size, size);
+            _redRect = new Rectangle(500, 500, size, size);
 
             base.Initialize();
         }
@@ -27,24 +42,57 @@ namespace Bonus_AI_game
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
+            _pixel = new Texture2D(GraphicsDevice, 1, 1);
+            _pixel.SetData(new[] { Color.White });
         }
 
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+            if (Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            // TODO: Add your update logic here
+            if (_gameOver)
+                return;
 
+            KeyboardState keyboard = Keyboard.GetState();
+
+            // Blue player (S)
+            if (keyboard.IsKeyDown(Keys.S) && !_prevKeyboard.IsKeyDown(Keys.S))
+                _blueRect.Y -= 20;
+
+            // Red player (Down Arrow)
+            if (keyboard.IsKeyDown(Keys.Down) && !_prevKeyboard.IsKeyDown(Keys.Down))
+                _redRect.Y -= 20;
+
+            // Check win conditions
+            if (_blueRect.Y <= 0)
+            {
+                _blueRect.Y = 0;
+                _gameOver = true;
+                _backgroundColor = Color.Blue;
+            }
+
+            if (_redRect.Y <= 0)
+            {
+                _redRect.Y = 0;
+                _gameOver = true;
+                _backgroundColor = Color.Red;
+            }
+
+            _prevKeyboard = keyboard;
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(_backgroundColor);
 
-            // TODO: Add your drawing code here
+            _spriteBatch.Begin();
+
+            _spriteBatch.Draw(_pixel, _blueRect, Color.Blue);
+            _spriteBatch.Draw(_pixel, _redRect, Color.Red);
+
+            _spriteBatch.End();
 
             base.Draw(gameTime);
         }
